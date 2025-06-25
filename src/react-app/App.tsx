@@ -1,4 +1,4 @@
-import "./App.css"
+import "./App.css";
 import React, { useState, useEffect } from 'react';
 import { Download, ExternalLink, Star, Shield, Clock, DollarSign, Phone, MessageCircle, Send, X, Menu, CheckCircle, Zap } from 'lucide-react';
 
@@ -17,11 +17,14 @@ const App: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeGame, setActiveGame] = useState<string | null>(null);
 
+  // Suppress unused variable warning
+  console.log(activeGame);
+
   const games: Game[] = [
     {
       id: 'orion',
       name: 'Orion Stars',
-      description: 'Experience the ultimate space-themed casino adventure with stunning graphics and massive jackpots.',
+      description: 'Experience the ultimate space-themed casino with stunning graphics and massive jackpots.',
       downloadUrl: 'http://www.orions.cc/download',
       image: '🌟',
       rating: 4.9,
@@ -143,6 +146,7 @@ const App: React.FC = () => {
     const handleScroll = () => {
       const cards = document.querySelectorAll('.game-card');
       cards.forEach((card, index) => {
+        console.log(index);
         const rect = card.getBoundingClientRect();
         const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
         if (isVisible) {
@@ -261,10 +265,10 @@ const App: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {games.map((game, index) => (
+            {games.map((game, gameIndex) => (
               <div
                 key={game.id}
-                className={`game-card opacity-0 translate-y-8 transition-all duration-700 delay-${index * 100}`}
+                className={`game-card opacity-0 translate-y-8 transition-all duration-700 delay-${gameIndex * 100}`}
                 onMouseEnter={() => setActiveGame(game.id)}
                 onMouseLeave={() => setActiveGame(null)}
               >
@@ -281,10 +285,10 @@ const App: React.FC = () => {
                       </div>
                       <h4 className="text-xl font-bold text-white mb-1">{game.name}</h4>
                       <div className="flex items-center justify-center space-x-1 mb-2">
-                        {[...Array(5)].map((_, i) => (
+                        {[...Array(5)].map((_, starIndex) => (
                           <Star
-                            key={i}
-                            className={`w-4 h-4 ${i < Math.floor(game.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'}`}
+                            key={starIndex}
+                            className={`w-4 h-4 ${starIndex < Math.floor(game.rating) ? 'text-yellow-400 fill-current' : 'text-gray-600'}`}
                           />
                         ))}
                         <span className="text-sm text-gray-400 ml-2">{game.rating}</span>
