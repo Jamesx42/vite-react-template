@@ -135,8 +135,8 @@ const App: React.FC = () => {
 
   const handleContactAgent = (platform: string) => {
     const links = {
-      telegram: 'https://t.me/countrygaming',
-      facebook: 'https://facebook.com/epicwinnersx',
+      telegram: 'https://t.me/Juwa999',
+      facebook: 'https://facebook.com/epicwinnersx1',
       whatsapp: 'https://wa.me/15753595056'
     };
     window.open(links[platform as keyof typeof links], '_blank');
