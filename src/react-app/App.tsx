@@ -137,7 +137,8 @@ const App: React.FC = () => {
     const links = {
       telegram: 'https://t.me/Juwa999',
       facebook: 'https://facebook.com/epicwinnersx1',
-      whatsapp: 'https://wa.me/15753595056'
+      whatsapp: 'https://wa.me/juwa.777',
+      signal: 'https://signal.com/juwa.777'
     };
     window.open(links[platform as keyof typeof links], '_blank');
   };
@@ -352,7 +353,7 @@ const App: React.FC = () => {
                   className="w-full flex items-center justify-center space-x-3 p-4 bg-blue-500/20 border border-blue-500/30 rounded-xl hover:bg-blue-500/30 transition-all duration-300"
                 >
                   <Send className="w-6 h-6 text-blue-400" />
-                  <span className="font-semibold">Telegram: @countrygaming</span>
+                  <span className="font-semibold">Telegram: @Juwa999</span>
                 </button>
 
                 <button
@@ -360,7 +361,7 @@ const App: React.FC = () => {
                   className="w-full flex items-center justify-center space-x-3 p-4 bg-blue-600/20 border border-blue-600/30 rounded-xl hover:bg-blue-600/30 transition-all duration-300"
                 >
                   <MessageCircle className="w-6 h-6 text-blue-500" />
-                  <span className="font-semibold">Facebook: @epicwinnersx</span>
+                  <span className="font-semibold">Facebook: @epicwinnersx1</span>
                 </button>
 
                 <button
@@ -368,7 +369,7 @@ const App: React.FC = () => {
                   className="w-full flex items-center justify-center space-x-3 p-4 bg-green-500/20 border border-green-500/30 rounded-xl hover:bg-green-500/30 transition-all duration-300"
                 >
                   <Phone className="w-6 h-6 text-green-400" />
-                  <span className="font-semibold">WhatsApp: +1 575 359 5056</span>
+                  <span className="font-semibold">WhatsApp: @Juwa.777</span>
                 </button>
               </div>
             </div>
